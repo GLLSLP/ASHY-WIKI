@@ -1,40 +1,84 @@
-gatsby-project-kb
-===
+# `@gatsby-project-kb/transformer-wiki-references`
 
-Here is a project developing a gatsby theme for publishing **K**nowledge **B**ase.
+A gatsby transformer plugin to extract references between markdown nodes. You can then use them to create bi-directional links.
 
-You can check out the demo and [documentation](https://gatsby-project-kb.vercel.app/).
+Forked from [mathieudutour/gatsby-digital-garden](https://github.com/mathieudutour/gatsby-digital-garden/tree/master/packages/gatsby-transformer-markdown-references).
 
-If you are looking for `gatsby-theme-kb`, go to directory [packages/gatsby-theme-kb](https://github.com/hikerpig/gatsby-project-kb/tree/master/packages/gatsby-theme-kb) for more detailed docs.
+An example site for using this plugin is at [https://wiki.hikerpig.cn/](https://wiki.hikerpig.cn/).
 
-![](https://i.loli.net/2021/01/28/cD6QRIZqUoum4Tf.png)
 
-# Development
-
-File structure:
+## Install
 
 ```
-├── demo // the demo site's code
-├── packages
-    └── gatsby-theme-kb // the Gatsby theme
-├── yarn.lock
+yarn add @gatsby-project-kb/transformer-wiki-references
 ```
 
-This is a common structure for developing Gatsby theme using yarn workspace. You can check more on Gatsby official tutorial [Building a Theme](https://www.gatsbyjs.com/tutorial/building-a-theme/).
+## Usage
 
-## Run it locally
-
+```javascript
+// In your gatsby-config.js
+module.exports = {
+  plugins: [
+    // after a markdown or Mdx transformer
+    {
+      resolve: `@gatsby-project-kb/transformer-wiki-references`,
+      options: {
+        contentPath: '/home/hikerpig/Notes',
+        types: ["Mdx"], // or ["MarkdownRemark"] (or both)
+        ignore: [
+          '**/.cache/**',
+          '**/.github/**',
+        ],
+      },
+    },
+  ],
+};
 ```
-yarn # install dependencies
-yarn dev # start devlopment
+
+
+### Configuration options
+
+**`contentPath`** [string][optional]
+
+The path to directory of your notes, if there are nested folders in your notes, it's recommended that this option is provided so the plugin can resolve the references correctly.
+
+**`types`** [Array<string>][optional]
+
+The types of the nodes to transform. Defaults to `['Mdx']`
+
+**`ignore`** [Array<string>][optional]
+
+Will be used along with `contentPath`, to filter out those files you want to ignore. Accepts globs or regexps, any format that's supported by [anymatch](https://www.npmjs.com/package/anymatch).
+
+
+## How to query for references
+
+Two types of references are available: `outboundReferences` and `inboundReferences`.
+
+The fields will be created in your site's GraphQL schema on the nodes of types specified in the options.
+
+```graphql
+{
+  allMdx {
+    outboundReferences {
+      ... on Mdx {
+        id
+        parent {
+          id
+        }
+      }
+    }
+    inboundReferences {
+      ... on Mdx {
+        id
+        parent {
+          id
+          ... on RoamPage {
+            title
+          }
+        }
+      }
+    }
+  }
+}
 ```
-
-# Support
-
-Feel free to open issues if you have any problems or suggestions for this project, I will do my best to solve them in my spare time.
-
-If you find it useful and find yourself in a mood of sunshine, you may support me a little pack of coffee beans.
-
-I like [Geisha](https://www.wikiwand.com/en/Geisha_\(coffee\)), you will like it, too.
-
-<a href="https://www.buymeacoffee.com/hikerpig" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
