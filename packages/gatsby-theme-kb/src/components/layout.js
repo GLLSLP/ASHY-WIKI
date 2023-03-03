@@ -25,6 +25,7 @@ const Layout = ({ children, headerAddons }) => {
 
   return (
     <div className="layout">
+      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} addons={headerAddons} /> */}
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} addons={headerAddons} />
       <div className="layout__content">
         <main>{children}</main>

@@ -37,7 +37,8 @@ const GraphButton = (props: {
 
   return (
     <React.Fragment>
-      <div
+      {/*그래프 버튼*/}
+      {/* <div
         title={hint}
         aria-label={hint}
         className={classNames('graph-button', className)}
@@ -47,7 +48,7 @@ const GraphButton = (props: {
       >
         <span dangerouslySetInnerHTML={{ __html: svgIconContent }}></span>
         {showHint && <span className="graph-button__hint">{hint}</span>}
-      </div>
+      </div> */}
       {typeof window !== 'undefined' ? (
         <Suspense fallback={null}>
           <Graph

@@ -7,8 +7,9 @@ import './header.css'
 const Header = ({ siteTitle, addons }) => (
   <header className="header">
     <div>
+      {/* <link rel="homepage icon" href="manggom.png"/> */}
       <h1 style={{ margin: 0 }}>
-        <Link to="/">{siteTitle}</Link>
+        <Link to="/" >{siteTitle}</Link>
       </h1>
     </div>
     {addons ? <div className="header__addons">{addons}</div>: null}
@@ -16,11 +17,12 @@ const Header = ({ siteTitle, addons }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  // siteTitle: PropTypes.string,
+  siteTitle: 'ㅁㄴㅇㄹ',
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `ㅁㄴㅇㄹ`,
 }
 
 export default Header

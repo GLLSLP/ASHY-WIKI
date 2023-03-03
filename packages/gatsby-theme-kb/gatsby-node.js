@@ -166,7 +166,7 @@ exports.createPages = async ({ graphql, actions }, options) => {
 
     if (result.errors) {
       console.log(result.errors)
-      throw new Error(`Could not query notes`, result.errors)
+      // throw new Error(`Could not query notes`, result.errors)
     }
 
     const TopicTemplate = require.resolve(

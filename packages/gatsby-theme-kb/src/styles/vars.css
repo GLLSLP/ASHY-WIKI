@@ -24,21 +24,21 @@
 
 /* default theme light */
 body {
-  --kb-link-color: #ff5449;
-  --kb-tree-cur-color: #e7e5e4;
+  --kb-link-color: #8ba0ff; /*마우스 올린곳 색깔*/
+  --kb-tree-cur-color: #e4e5e7; /*사이드바 현재 페이지*/
   --kb-font-family: 'Avenir', -apple-system, sans-serif;
   --kb-shadow-bg: rgba(0, 0, 0, 0.2);
-  --kb-text-color: hsl(2deg 20% 15%);
-  --kb-text-inverse-color: white;
+  --kb-text-color: hsl(0, 0%, 34%); /*기본 글자 색깔*/
+  --kb-text-inverse-color: rgb(255, 255, 255);
   --kb-references-bg:  #fafafa;
-  --kb-search-highlight-bg: #eaeaea;
+  --kb-search-highlight-bg: #c4e1e2; /*검색결과창 마우스오버 색깔*/
   --kb-note-bg: var(--bg-color-1);
   --kb-separator-color: #ddd;
-  --kb-scrollbar-thumb: #ddd;
-  --kb-blockquote-bg: #f6f6f6;
+  --kb-scrollbar-thumb: #82b8ff; /*메인 스크롤바 색깔*/
+  --kb-blockquote-bg: #e6eef7; /*>강조 글 부분 색깔*/
 
-  --bg-color-1: #F9FAFB;
-  --bg-color-2: #F3F4F6;
+  --bg-color-1: #ffffff; /*글 있는 부분 배경색*/
+  --bg-color-2: #ffffff; /*양쪽 사이드 배경색*/
   --code-bg-color: #f0f0f0;
   --code-color: #333;
 }

@@ -10,9 +10,10 @@ const Topic = (props: TopicProps) => {
   return (
     <>
       <ThemeTopic {...props}></ThemeTopic>
-      <div className="comment-wrapper">
+      {/* 댓글창 생기기/없애기*/}
+      {/* <div className="comment-wrapper">
         <Comment issueTerm={props.file.fields.slug} />
-      </div>
+      </div> */}
     </>
   )
 }

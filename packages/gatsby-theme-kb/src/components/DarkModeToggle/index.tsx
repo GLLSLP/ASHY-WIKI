@@ -5,7 +5,7 @@ import './dark-mode-toggle.css'
 
 const DarkModeToggle = (props: { showHint?: boolean}) => {
   const { value: isDark, toggle: toggleDarkMode } = useDarkMode(false)
-  const hint = isDark ? 'Activate light mode' : 'Activate dark mode'
+  const hint = isDark ? '밝아지는' : '어두워지는'
 
   return (
     <label

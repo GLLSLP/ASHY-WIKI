@@ -6,8 +6,9 @@ module.exports = {
   pathPrefix,
   siteMetadata: {
     title: `안소혜윤 위키`,
-    description: `Your personal knowledge base`,
-    author: `@hikerpig`,
+    description: `안소혜윤의 위키입니다`,
+    author: `@ashy`,
+    icon: `manggom.png`, 
   },
   plugins: [
     {

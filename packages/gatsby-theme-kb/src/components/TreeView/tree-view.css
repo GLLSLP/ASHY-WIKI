@@ -22,7 +22,7 @@ ul.tree-view,
 .tree-view__icon {
   transition: transform 0.2s ease;
   margin-left: -5px;
-  margin-right: 2px;
+  margin-right: 2px; /* 사이드바 >와 글자사이의 간격*/
   position: relative;
   top: -1px;
 }

@@ -189,6 +189,7 @@ export default function TopicLayout(props: Props) {
             <div {...tocRestoration}>
               {isMobileMode && (
                 <header>
+                  {/* <link rel="homepage icon" href="manggom.png"/> */}
                   <b>Table Of Contents</b>
                 </header>
               )}

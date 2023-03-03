@@ -101,7 +101,7 @@ const SearchBar = React.forwardRef<any>((props, ref) => {
       </svg>
       <input
         {...getInputProps({
-          placeholder: 'Search...',
+          placeholder: '검색곰',
           onChange: onChange,
         })}
         ref={inputRef}
