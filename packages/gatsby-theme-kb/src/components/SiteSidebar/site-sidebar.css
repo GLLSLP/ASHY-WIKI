@@ -11,7 +11,7 @@
 }
 
 .site-sidebar__title a {
-  color: var(--kb-text-color);
+  color: var(--kb-title-color);
 }
 
 .site-sidebar__title a:hover {

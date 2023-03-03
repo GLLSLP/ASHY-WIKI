@@ -1,11 +1,11 @@
 const path = require('path')
 
-const pathPrefix = process.env.KB_BASE_PATH || '/'
+// const pathPrefix = process.env.KB_BASE_PATH || '/'
 
 module.exports = {
-  pathPrefix,
+  pathPrefix: `/ASHY-WIKI`,
   siteMetadata: {
-    title: `안소혜윤 위키`,
+    title: `안소혜윤 위키🍑`,
     description: `안소혜윤의 위키입니다`,
     author: `@ashy`,
     icon: `manggom.png`, 

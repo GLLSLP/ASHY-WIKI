@@ -24,6 +24,8 @@
 
 /* default theme light */
 body {
+  --kb-test-color: hsl(0, 100%, 50%); /*테스트용 색깔*/
+  --kb-title-color: #ffc5f7; /*사이트 타이틀 색깔*/
   --kb-link-color: #8ba0ff; /*마우스 올린곳 색깔*/
   --kb-tree-cur-color: #e4e5e7; /*사이드바 현재 페이지*/
   --kb-font-family: 'Avenir', -apple-system, sans-serif;
@@ -34,7 +36,7 @@ body {
   --kb-search-highlight-bg: #c4e1e2; /*검색결과창 마우스오버 색깔*/
   --kb-note-bg: var(--bg-color-1);
   --kb-separator-color: #ddd;
-  --kb-scrollbar-thumb: #82b8ff; /*메인 스크롤바 색깔*/
+  --kb-scrollbar-thumb: #c1caff; /*메인 스크롤바 색깔*/
   --kb-blockquote-bg: #e6eef7; /*>강조 글 부분 색깔*/
 
   --bg-color-1: #ffffff; /*글 있는 부분 배경색*/
